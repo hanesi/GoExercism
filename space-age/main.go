@@ -1,3 +1,7 @@
+/*
+This script takes an Age in seconds and returns a Map of the Age
+in years on each planet in the solar system
+*/
 package main
 
 import "fmt"
