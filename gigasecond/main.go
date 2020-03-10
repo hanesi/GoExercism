@@ -1,3 +1,4 @@
+// Takes a time, returns the timestamp a gigasecond in the future
 package main
 
 import (
