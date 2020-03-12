@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(CollatzConjecture(1000000))
+	fmt.Println(CollatzConjecture(0))
 }
 
-func CollatzConjecture(start int) int {
+func CollatzConjecture(start int) (int, error) {
 	if start <= 0 {
-		return 0
+		return 0, fmt.Errorf("%d is not an allowed value", start)
 	}
 	var count int
 	for count = 0; start > 1; count++ {
@@ -19,5 +19,5 @@ func CollatzConjecture(start int) int {
 			start = (3 * start) + 1
 		}
 	}
-	return count
+	return count, nil
 }
