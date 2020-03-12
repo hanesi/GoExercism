@@ -7,6 +7,9 @@ func main() {
 }
 
 func CollatzConjecture(start int) int {
+	if start <= 0 {
+		return 0
+	}
 	var count int
 	for count = 0; start > 1; count++ {
 		switch {
