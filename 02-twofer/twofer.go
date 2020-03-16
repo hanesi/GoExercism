@@ -4,11 +4,11 @@ import "fmt"
 
 // ShareWith should have a comment documenting it.
 func ShareWith(name string) string {
-	var s string
+	s := "One for %s, one for me."
 	if name != "" {
-		s = fmt.Sprintf("One for %s, one for me.", name)
+		s = fmt.Sprintf(s, name)
 	} else {
-		return "One for you, one for me."
+		return fmt.Sprintf(s, "you")
 	}
 	return s
 }
