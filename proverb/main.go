@@ -18,7 +18,7 @@ func Proverb(rhyme []string) (proverbSlice []string) {
 		return append(proverbSlice, fmt.Sprintf("And all for the want of a %s.", string(rhyme[0])))
 	}
 	proverb := "For want of a %s the %s was lost."
-	for i := 0; i < len(rhyme)-1; {
+	for i := 0; i < len(rhyme)-1; i++ {
 		word1 := rhyme[i]
 		word2 := rhyme[i+1]
 		proverbSlice = append(proverbSlice, fmt.Sprintf(proverb, word1, word2))
